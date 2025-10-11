@@ -1,0 +1,153 @@
+<!-- Author: Jacob Robinson -->
+<!-- Date: 09/28/2025 -->
+<!-- Comments: Assignment 1 -->
+<!DOCTTYPE html>
+<html>
+<head><!--Non-printable content -->
+<title>analytics.html</title>
+<link href="../Assignment_LookAndFeel-master/css/">
+<div style="text-align: center;">
+<table class="center" border="1"></table>
+<p><img src="img/company logo.PNG" alt="Company logo" width="110" height="100"></p>
+<h1>GameGrid Gaming Community</h1>
+<hr style="border: 1px solid black; width: 100%; margin: 5px auto;">
+<tr>
+<button><th><a href="index.html">Home</a></th></button>
+<button><th><a href="analytics.html">Analytics</a></th></button>
+<button><th><a href="managevotes.html">Voting</a></th></button>
+<button><th><a href="aboutus.html">About</a></th></button>
+</tr>
+</table>
+<hr style="border: 1px solid black; width: 100%; margin: 5px auto;">
+<img src="img/Gaming Home Page Logo1.png" alt="USF webpage logo" width="1423" height="88.9">
+<br></br>
+</head>
+<body>
+<!-- Printable page content -->
+<div style="text-align: center;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Embedded GameGrid Gaming Community Analytics</title>
+</head>
+<body>
+<h2>GameGrid Analytics</h2>
+<br></br>
+<p>The below analytics highlight the current number of players actively engaged in ten popular games, offering a real-time snapshot of gaming activity. </p>
+<p>Counter-Strike: Global Offensive leads the list with 785,506 players, maintaining its stronghold in the competitive shooter genre. Dota 2 follows </p>
+<p>with 356,601 players, reflecting its continued relevance in the MOBA scene. Apex Legends ranks third with 314,210 current players, showcasing sustained </p>
+<p>interest in fast-paced battle royale gameplay. PUBG: BATTLEGROUNDS and Hogwarts Legacy also show solid engagement, with 240,021 and 228,129 players respectively. </p>
+<p>Lost Ark, an MMORPG, retains 139,799 active users, while Grand Theft Auto V continues to draw 99,312 players thanks to its expansive open-world experience. Interestingly, </p>
+<p>Wallpaper Engine, a customization tool, has 87,021 users, underscoring the broader scope of interactive platforms.Rounding out the list are Call of Duty: Modern Warfare II | Warzone </p>
+<P>2.0 and NARAKA: BLADEPOINT, each with over 84,000 players. Overall, the data reflects the current pulse of the gaming community across diverse genres and experiences.</p>
+<br></br>
+<style>
+body {
+background-color: #99b0ef;
+}
+</style>
+<style>
+table {
+background-color: white;
+}
+</style>
+  <table align="center";table border="2.5px solid black">
+  <tr>
+    <th>&nbsp&nbspNo&nbsp&nbsp</th>
+    <th>&nbsp&nbspGame Name&nbsp&nbsp</th>
+    <th>&nbsp&nbspCurrent # of Players&nbsp&nbsp</th>
+  </tr>
+  <tr>
+    <td><center>1</center></td>
+    <td>&nbsp&nbspCounter-Strike: Global Offensive</td>
+    <td><strong><center>785,506 </center></strong></td>
+  </tr>
+  <tr>
+    <td><center>2</center></td>
+    <td>&nbsp&nbspDota 2</td>
+    <td><strong><center>356,601</center></strong></td>
+  </tr>
+  <tr>
+    <td><center>3</center></td>
+    <td>&nbsp&nbspApex Legends</td>
+    <td><strong><center>314,210</center></strong></td>
+  </tr>
+  <tr>
+    <td><center>4</center></td>
+    <td>&nbsp&nbspPUBG: BATTLEGROUNDS</td>
+    <td><strong><center>240,021</center></strong></td>
+  </tr>
+  <tr>
+    <td><center>5</center></td>
+    <td>&nbsp&nbspHogwarts Legacy</td>
+    <td><strong><center>228,129</center></strong></td>
+  </tr>
+  <tr>
+    <td><center>6</center></td>
+    <td>&nbsp&nbspLost Ark</td>
+    <td><strong><center>139,799</center></strong></td>
+  </tr>
+  <tr>
+    <td><center>7</center></td>
+    <td>&nbsp&nbspGrand Theft Auto V</td>
+    <td><strong><center>99,312</center></strong></td>
+  </tr>
+  <tr>
+    <td><center>8</center></td>
+    <td>&nbsp&nbspWallpaper Engine</td>
+    <td><strong><center>87,021</center></strong></td>
+  </tr>
+  <tr>
+    <td><center>9</center></td>
+    <td>&nbsp&nbspCall of Duty®: Modern Warfare® II | Warzone™ 2.0&nbsp&nbsp</td>
+    <td><strong><center>85,319</center></strong></td>
+  </tr>
+  </tr>
+    <td><center>10</center></td>
+    <td>&nbsp&nbspNARAKA: BLADEPOINT</td>
+    <td><strong><center>84,792</center></strong></td>
+  </tr>
+</table>
+<p></p>
+<a href="https://www.kaggle.com/datasets/faisaljanjua0555/most-played-games-of-all-time" target="_blank">
+<button>Link to Published Data</button></a>
+<br></br>
+<br></br>
+<div>
+  <canvas id="myChart1"></canvas>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById('myChart1');
+    new Chart(ctx, {
+    type: 'bar',
+    data: {
+    labels : ['Counter-Strike: Global Offensive', 'Dota 2', ' Apex Legends', 'PUBG: BATTLEGROUNDS', 'Hogwarts Legacy', 'Lost Ark','Grand Theft Auto V',' Wallpaper Engine', 'Call of Duty®: Modern Warfare® II | Warzone™ 2.0','NARAKA: BLADEPOINT'],
+    datasets: [{
+    label: '  Current # of Players',
+    data: [785506, 356601,314210,240021,228129,139799,99312,87021,85319,84792],
+    borderWidth: 1
+       }]
+    },
+    options: {
+    scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+</div>
+<p></p>
+<br></br>
+<p></p>
+<p><img src="img/Gaming Home Page Logo2.png" alt="USF webpage logo" width="1405" height="469"></p>
+<button><th><a href="index.html">Back to Home</a></th></button>
+<div style="text-align: center;">
+<img src="img/usf-logo-png-2.png" alt="USF webpage logo" width="540" height="340">
+</div>
+</script>
+</body>
+</html>
